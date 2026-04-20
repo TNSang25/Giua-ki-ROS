@@ -1,3 +1,7 @@
+# Clone repo
+```
+git clone 
+```
 # Các bước chạy
 Chạy file launch :
 
