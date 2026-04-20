@@ -3,13 +3,13 @@
 git clone https://github.com/TNSang25/Giua-ki-ROS.git
 ```
 # Các bước chạy
-** Chạy file launch ** :
+**Chạy file launch** :
 
 ```
 ros2 launch robot_bringup robot_gazebo.launch.xml
 ```
 
-** Tiếp theo mở thêm 3 terminal mới và chạy các lệnh sau **:
+**Tiếp theo mở thêm 3 terminal mới và chạy các lệnh sau**:
 * Chạy node lái xe :
 
 ```
