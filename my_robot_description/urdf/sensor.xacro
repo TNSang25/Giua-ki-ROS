@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <link name="imu">
+        <inertial>
+            <origin xyz="0 -2.77555756156289E-17 -0.001" rpy="0 0 0" />
+            <mass value="0.000300000000000001" />
+            <inertia
+            ixx="2.60000000000001E-09"
+            ixy="-2.38127833643275E-25"
+            ixz="-9.59216981292172E-24"
+            iyy="5.72500000000003E-09"
+            iyz="2.91433543964105E-24"
+            izz="8.12500000000004E-09" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="package://my_robot_description/meshes/imu.STL" />
+            </geometry>
+            <material name="blue">
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="package://my_robot_description/meshes/imu.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0 0 -0.048" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="imu" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="lidar">
+        <inertial>
+            <origin xyz="-6.93889390390723E-18 5.55111512312578E-17 -0.017440379321104" rpy="0 0 0" />
+            <mass value="0.031946861306415" />
+            <inertia
+            ixx="2.35645405727583E-05"
+            ixy="-7.10858338912758E-22"
+            ixz="1.30243311537391E-21"
+            iyy="2.35645405727583E-05"
+            iyz="2.11992235615218E-24"
+            izz="3.46400556805015E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="package://my_robot_description/meshes/lidar.STL" />
+            </geometry>
+            <material name="black">
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="package://my_robot_description/meshes/lidar.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="0.0775 0 -0.025" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="lidar" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="camera">
+        <inertial>
+            <origin xyz="-5.55111512312578E-17 -2.77555756156289E-17 -0.00590560908441184" rpy="0 0 0" />
+            <mass value="0.00264269908169872" />
+            <inertia
+            ixx="4.79059510587783E-07"
+            ixy="-2.87858853168454E-22"
+            ixz="2.55233772967723E-23"
+            iyy="5.24970105877827E-08"
+            iyz="-2.98589236595148E-23"
+            izz="5.15846238521234E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_description/meshes/camera.STL" />
+            </geometry>
+            <material name="black">
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="package://my_robot_description/meshes/camera.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="-0.066462 0.2228 0.13" rpy="3.1416 0 1.8607" />
+        <parent link="link1" />
+        <child link="camera" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+</robot>
