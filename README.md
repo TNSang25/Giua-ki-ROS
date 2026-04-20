@@ -1,6 +1,6 @@
 # Clone repo
 ```
-git clone 
+git clone https://github.com/TNSang25/Giua-ki-ROS.git
 ```
 # Các bước chạy
 Chạy file launch :
