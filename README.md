@@ -12,6 +12,14 @@ sudo apt install ros-humble-ros-gz -y
 ```
 sudo apt install ros-humble-slam-toolbox -y
 ```
+* **rviz2**
+```
+sudo apt update
+sudo apt install ros-humble-rviz2 -y
+
+# Các plugin cần cho dự án
+sudo apt install ros-humble-rviz-default-plugins -y
+```
 # Clone repo
 ```
 git clone https://github.com/TNSang25/Giua-ki-ROS.git
