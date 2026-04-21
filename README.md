@@ -23,6 +23,7 @@ sudo apt install ros-humble-rviz2 -y
 
 # Các plugin cần cho dự án
 sudo apt install ros-humble-rviz-default-plugins -y
+sudo apt install ros-humble-rviz-imu-plugin
 ```
 # Các Packages và chức năng
 * [**gazebo_map**](gazebo_map) : tạo không gian mô phỏng (world) cho Robot trong Gazebo.
