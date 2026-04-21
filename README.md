@@ -38,6 +38,9 @@ git clone https://github.com/TNSang25/Giua-ki-ROS.git
 **Chạy file launch** :
 
 ```
+# Trỏ vào workspace 
+colcon build
+source install/setup.bash
 ros2 launch robot_bringup robot_gazebo.launch.xml
 ```
 
@@ -45,17 +48,20 @@ ros2 launch robot_bringup robot_gazebo.launch.xml
 * Chạy node lái xe :
 
 ```
+source install/setup.bash
 ros2 run robot_control robot_keyboard
 ```
 
 * Chạy node điều khiển tay máy :
 
 ```
+source install/setup.bash
 ros2 run robot_control arm_control
 ```
 
 * Chạy node đọc dữ liệu IMU :
 
 ```
+source install/setup.bash
 ros2 run robot_control imu_reader
 ```
