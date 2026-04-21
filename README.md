@@ -1,3 +1,17 @@
+# Cần có
+* [**ROS 2 Humble**](https://docs.ros.org/en/humble/index.html)
+* **Ignition Gazebo**
+```
+sudo apt install ignition-fortress -y
+```
+* **ROS 2 - Ignition Bridge**
+```
+sudo apt install ros-humble-ros-gz -y
+```
+* **SLAM Toolbox**
+```
+sudo apt install ros-humble-slam-toolbox -y
+```
 # Clone repo
 ```
 git clone https://github.com/TNSang25/Giua-ki-ROS.git
